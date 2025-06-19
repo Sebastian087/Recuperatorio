@@ -1,0 +1,17 @@
+
+###
+GET http://127.0.0.1:3100/api/card/
+###
+
+GET http://127.0.0.1:3100/api/card/maria@example.com
+
+###
+PUT http://127.0.0.1:3100/api/card/374c4677-cbe2-454f-8e38-c92ff62a06ac
+Content-Type: application/json
+{
+
+    "cardNumber": "4000000",
+    "cvv": "111",
+
+    
+}

@@ -1,18 +1,16 @@
 import express from "express";
 import { config } from "./config/config.js";
-import { bookRouter } from "./routes/bookRouter.js";
-import { externalRouter } from "./routes/externalRouter.js";
-import { jsonFileRouter } from "./routes/jsonFileRouter.js";
+import { cardRouter } from "./routes/cardRouter.js";
 
+const PORT = process.env.PORT ?? 3100
+const HOST = "127.0.0.1"
 const app = express();
 app.use(express.json());
 
-app.use("/api", bookRouter);
-app.use("/api", externalRouter);
-app.use("/api", jsonFileRouter);
+app.use("/api", cardRouter);
 
-app.listen(config.PORT, () => {
+app.listen(PORT, () => {
 	console.log(
-		`🫶🏻✔️ Server running in http://${config.HOST}:${config.PORT}🛠️👍🏻`,
+		`🫶🏻✔️ Server running in http://${HOST}:${PORT}🛠️👍🏻`,
 	);
 });

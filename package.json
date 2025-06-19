@@ -24,13 +24,17 @@
   },
   "contributors": [],
   "scripts": {
-    "app": "node --watch ./src/app.js",
+    "app": "node --env-file=./.env --watch ./src/app.js",
     "lint": "npx @biomejs/biome check --write ./src"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4"
+    "@biomejs/biome": "1.9.4",
+    "jest": "^30.0.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.1"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
     "express": "^5.1.0",
     "node-fetch": "^3.3.2"
   }
